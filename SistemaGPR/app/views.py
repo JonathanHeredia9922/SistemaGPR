@@ -22,7 +22,7 @@ def registro(request):
                 user = User.objects.create_user(username=request.POST['username'], 
                                      password=request.POST['password1'])
                 user.save()
-                return HttpResponse('Usuario creado correctamente')
+                return HttpResponse('Usuario creado crrectamente')
             except:
                 return HttpResponse('El ususario ya existe')
-        return HttpResponse('Las contraseñas no coinciden')
+        return HttpResponse('Las contraseñas no coinciden' )
