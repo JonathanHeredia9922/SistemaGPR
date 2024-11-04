@@ -1,0 +1,50 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Tipografía */
+    background-color: #f4f4f4; /* Color de fondo */
+    margin: 0; /* Sin margen */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilo del encabezado */
+h1 {
+    text-align: center; /* Centrar texto */
+    color: #333; /* Color del texto */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo del formulario */
+form {
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centrando el formulario */
+    padding: 20px; /* Relleno dentro del formulario */
+    background: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+}
+
+/* Estilo de los elementos del formulario */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form button {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Relleno interno */
+    margin: 10px 0; /* Margen superior e inferior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilo del botón */
+form button {
+    background-color: #28a745; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente del botón */
+}
+
+form button:hover {
+    background-color: #218838; /* Color del botón al pasar el mouse */
+}

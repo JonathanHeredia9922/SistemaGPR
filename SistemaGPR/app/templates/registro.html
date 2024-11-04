@@ -1,13 +1,20 @@
+{% load static %}
+
 <h1>Registro</h1>
 
-<form action="/registro/" method="POST">
+<!-- Vinculando el archivo CSS -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/styles.css' %}">
 
-    {% csrf_token %}
-
-    {{form.as_p}}
-
-    <button>
-        Registro
-    </button>
-
-</form>
+<!-- Formulario con clases para facilitar el estilo -->
+<div class="form-container">
+    <form action="/registro/" method="POST" class="registration-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-submit">Registro</button>
+    </form>
+    
+    <!-- Botón para regresar al login -->
+    <div class="login-link">
+        <p>¿Ya tienes una cuenta? <a href="/login/" class="btn-login">Iniciar sesión</a></p>
+    </div>
+</div>

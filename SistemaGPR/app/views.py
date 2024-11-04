@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
 def inicio(request):
@@ -26,3 +27,7 @@ def registro(request):
             except:
                 return HttpResponse('El ususario ya existe')
         return HttpResponse('Las contraseñas no coinciden' )
+
+class CustomLoginView(LoginView):
+    template_name = 'login.html'
+    redirect_authenticated_user = True 
