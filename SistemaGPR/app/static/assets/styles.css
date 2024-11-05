@@ -48,3 +48,121 @@ form button {
 form button:hover {
     background-color: #218838; /* Color del botón al pasar el mouse */
 }
+
+.register-link {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+.register-link p {
+    margin: 0; /* Elimina margen para un mejor alineamiento */
+}
+
+.register-link button {
+    background-color: #007bff; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+}
+
+.register-link button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+.login-link {
+    text-align: center; /* Centra el texto */
+}
+
+.login-link p {
+    margin: 10px 0 0; /* Espaciado para el párrafo */
+}
+
+.btn-login {
+    color: #007bff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.btn-login:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+h2 {
+    text-align: center; /* Centra el texto */
+    color: #333; /* Color del texto */
+    margin-top: 20px; /* Margen superior */
+}
+
+.error {
+    color: red;
+    background-color: #fdd;
+    text-align: center;
+    border: 0px solid red;
+    padding: 2px;
+    margin: 10px 0; /* Ajusta según el espaciado que desees */
+    border-radius: 5px;
+}
+
+/* Estilos adicionales para el formulario de registro */
+.form-field {
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.password-requirements {
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* Mejoras en los mensajes de error */
+.error {
+    margin: 10px 0;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fdd;
+    color: #dc3545;
+    font-size: 0.9em;
+}
+
+/* Estilos para los campos con error */
+.form-field input.error {
+    border-color: #dc3545;
+}
+
+/* Mejoras en la accesibilidad */
+input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Estilos para el texto de ayuda del formulario */
+.helptext {
+    display: block;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 480px) {
+    form {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .register-link button,
+    form button {
+        width: 100%;
+    }
+}

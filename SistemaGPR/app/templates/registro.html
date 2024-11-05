@@ -1,21 +1,28 @@
 {% load static %}
 
-<h1>Registro</h1>
-
-<!-- Vinculando el archivo CSS -->
-<link rel="stylesheet" type="text/css" href="{% static 'assets/styles.css' %}">
-
-<!-- Formulario con clases para facilitar el estilo -->
-<div class="form-container">
-    <form action="/registro/" method="POST" class="registration-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn-submit">Registro</button>
-    </form>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/styles.css' %}">
+</head>
+<body>
+    <h2 class="centered-title">Registro</h2>
     
-    <!-- Botón para regresar al login -->
-    <div class="login-link">
-        <p>¿Ya tienes una cuenta? <a href="/login/" class="btn-login">Iniciar sesión</a></p>
+    <!-- Formulario de registro -->
+    <form method="post">
+        {% csrf_token %}
         
-    </div>
-</div>
+        <!-- Campos del formulario -->
+        {{ form.as_p }}
+
+        <button type="submit">Registro</button>
+
+        <!-- Mensaje para redirigir al inicio de sesión -->
+        <div class="login-link" style="text-align: center; margin-top: 20px;">
+            <p>¿Ya tienes una cuenta? <a href="{% url 'login' %}" class="btn-login">Iniciar sesión</a></p>
+        </div>
+    </form>
+</body>
+</html>
