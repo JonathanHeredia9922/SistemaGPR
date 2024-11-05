@@ -1,2 +1,36 @@
-<h1>Registro</h1>
-{{form}}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/styles.css' %}">
+</head>
+<body>
+    <h2 class="centered-title">Iniciar Sesión</h2>
+    
+    <!-- Formulario de login -->
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}  <!-- Renderiza los campos del formulario -->
+        1
+        <!-- Mensajes de error, colocados encima del botón -->
+        {% if form.errors %}
+            <div class="error">
+                <p>El nombre de usuario o contraseña son incorrectos</p>
+            </div>
+        {% endif %}
+        
+        <button type="submit">Iniciar Sesión</button>
+    </form>
+
+    <!-- Mensaje y botón para redirigir al registro, debajo del botón de iniciar sesión -->
+    <div class="register-link" style="margin-top: 20px;">
+        <p>¿No tienes una cuenta?</p>
+        <a href="{% url 'registro' %}">
+            <button type="button">Crear una cuenta</button>
+        </a>
+    </div>
+</body>
+</html>
